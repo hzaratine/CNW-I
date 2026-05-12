@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    color: #222;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("etec.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.35;
+    z-index: -2;
+}
+
+.sidebar {
+    width: 220px;
+    height: 100vh;
+    background-color: #c80000;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 25px;
+    box-shadow: 4px 0 15px rgba(0,0,0,0.35);
+}
+
+.logo {
+    width: 200px;
+    margin-bottom: 30px;
+}
+.sidebar a {
+    width: 100%;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    padding: 14px 0;
+    font-weight: bold;
+}
+
+.sidebar a:hover {
+    background-color: rgba(255,255,255,0.15);
+}
+
+.content {
+    margin-left: 220px;
+    width: calc(100% - 220px);
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.92);
+    padding: 40px;
+    width: 80%;
+    max-width: 9000px;
+    border-radius: 0px;
+   
+}
+
+h1 {
+    color: #c80000;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+h3 {
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+ul {
+    padding-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+li {
+    margin-bottom: 6px;
+}
+
+@media (max-width: 700px) {
+    .sidebar {
+        width: 170px;
+    }
+
+    .content {
+        margin-left: 170px;
+        width: calc(100% - 170px);
+    }
+
+    section {
+        padding: 30px 15px;
+    }
+
+    .card {
+        width: 95%;
+        padding: 25px;
+    }
+}
+
+
+.menu-anos {
+    margin-top: 20px;
+}
+
+.menu-anos input {
+    display: none;
+}
+
+.menu-anos label {
+    display: inline-block;
+    padding: 10px 16px;
+    background: #c80000;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 6px;
+}
+
+.menu-anos label:hover {
+    background: #9e0000;
+}
+
+.conteudo-anos {
+    margin-top: 20px;
+}
+
+.ano {
+    display: none;
+}
+
+#btn1:checked ~ label[for="btn1"],
+#btn2:checked ~ label[for="btn2"],
+#btn3:checked ~ label[for="btn3"] {
+    background: #600000;
+}
+
+#btn1:checked ~ .conteudo-anos .ano1 {
+    display: block;
+}
+
+#btn2:checked ~ .conteudo-anos .ano2 {
+    display: block;
+}
+
+#btn3:checked ~ .conteudo-anos .ano3 {
+    display: block;
+}
