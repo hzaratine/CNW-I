@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador da Copa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="fundo-confetes"></canvas>
+
+<header class="topo-verde">
+    <button id="menu-btn">Menu</button>
+    <h1>Simulador da Copa</h1>
+</header>
+
+<nav id="menu-lateral">
+    <button id="btn-aleatorio">Aleatório</button>
+    <button id="btn-proxima">Gerar Oitavas</button>
+</nav>
+
+<main id="container">
+
+    <section class="coluna">
+        <h2>Grupos</h2>
+        <div id="grupos"></div>
+    </section>
+
+    <section class="coluna">
+        <h2>Oitavas</h2>
+        <div id="oitavas"></div>
+    </section>
+
+    <section class="coluna">
+        <h2>Quartas</h2>
+        <div id="quartas"></div>
+    </section>
+
+    <section class="coluna">
+        <h2>Semifinal</h2>
+        <div id="semifinais"></div>
+    </section>
+
+    <section class="coluna coluna-final">
+        <h2>Final</h2>
+        <div id="final"></div>
+        <div id="campeao">Campeão</div>
+    </section>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

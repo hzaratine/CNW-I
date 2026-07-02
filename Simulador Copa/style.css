@@ -1,0 +1,238 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    overflow: hidden;
+    color: #1e293b;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f1f5f9;
+}
+
+
+
+
+.topo-verde {
+    background-color: #004d26;
+    width: 100%;
+    height: 54px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 3px solid #ffbc0d;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.topo-verde h1 {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+
+#menu-btn {
+    position: absolute;
+    left: 16px;
+    height: 32px;
+    padding: 0 14px;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+#menu-btn:hover {
+    background-color: #ffffff;
+    color: #004d26;
+}
+
+#menu-lateral {
+    position: fixed;
+    top: 54px;
+    left: -220px;
+    width: 200px;
+    padding: 16px;
+    background-color: #ffffff;
+    box-shadow: 4px 0 20px rgba(0,0,0,0.15);
+    transition: left 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+    height: calc(100vh - 54px);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#menu-lateral.aberto {
+    left: 0;
+}
+
+#menu-lateral button {
+    width: 100%;
+    background-color: #004d26;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+#menu-lateral button:hover {
+    background-color: #003318;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    padding: 16px;
+    width: 100%;
+    height: calc(100vh - 54px);
+}
+
+.coluna {
+    background-color: #ffffff;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.coluna::-webkit-scrollbar {
+    width: 0px;
+}
+
+.coluna h2 {
+    font-size: 12px;
+    margin-bottom: 12px;
+    text-align: center;
+    color: #475569;
+    font-weight: 700;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.grupo {
+    border: 1px solid #e2e8f0;
+    padding: 8px;
+    margin-bottom: 8px;
+    background-color: #f8fafc;
+    border-radius: 6px;
+}
+
+.grupo strong {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 11px;
+    color: #004d26;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.grupo select {
+    width: 100%;
+    margin-bottom: 4px;
+    padding: 6px;
+    border: 1px solid #36b92a;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: #1e293b;
+    font-size: 12px;
+}
+
+.grupo select:last-child {
+    margin-bottom: 0;
+}
+.partida {
+    border: 1px solid #458ce9;
+    padding: 8px;
+    margin-bottom: 6px;
+    background-color: #ffffff;
+    border-radius: 6px;
+    
+   
+    display: grid;
+    grid-template-columns: 1fr auto auto auto 1fr;
+    align-items: center;
+    gap: 6px;
+    text-align: center;
+}
+
+.partida div {
+    font-size: 11px;
+    font-weight: 600;
+    color: #1e293b;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.partida div:first-child {
+    text-align: left;
+}
+
+.partida div:last-child {
+    text-align: right;
+}
+
+.partida select {
+    width: 36px;
+    padding: 4px 2px;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 11px;
+    background-color: #f1f5f9;
+    font-weight: 700;
+}
+
+
+.coluna-final {
+    background-color: #fffbeb;
+    border: 1px solid #fde68a;
+}
+
+#campeao {
+    font-size: 13px;
+    font-weight: 800;
+    text-align: center;
+    background-color: #ffbc0d;
+    color: #004d26;
+    padding: 10px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    margin-top: auto;
+    box-shadow: 0 2px 6px rgba(251, 191, 36, 0.3);
+}
+
+
+
+#fundo-confetes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999; 
+    pointer-events: none;
+}
